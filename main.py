@@ -1,5 +1,6 @@
 from tkinter import *
 from random import randint
+from time import sleep
 
 window = Tk()
 window.title("Mister Erathia")
@@ -11,20 +12,16 @@ class Hero:
         self.img = PhotoImage(file=img)
         self.photo_label = Label(window, image=self.img)
 
+christian = Hero("Christian", "img\Hero_Christian.png")
+edric = Hero("Edric", "img\Hero_Edric.png")
+orrin = Hero("Orrin", "img\Hero_Orrin.png")
+lord_haart = Hero("Lord Haart", "img\Hero_Lord_Haart_Knight.png")
 
-
+heroes = [christian, edric, orrin, lord_haart]
 
 unknown_img = PhotoImage(file="img\Hero_Christian.png")
 unknown1_photo_label = Label(window, image=unknown_img)
 unknown2_photo_label = Label(window, image=unknown_img)
-# professional_img = PhotoImage(file="img\profes.gif")
-# professional_photo_label = Label(window, image=professional_img)
-# inspired_img = PhotoImage(file="img\inspired.gif")
-# inspired_photo_label = Label(window, image=inspired_img)
-# enraged_img = PhotoImage(file="img\enraged.gif")
-# enraged_photo_label = Label(window, image=enraged_img)
-# jonah_img = PhotoImage(file="img\jonah.gif")
-# jonah_photo_label = Label(window, image=jonah_img)
 
 title = Label(window, text="Mister Erathia", fg="deep pink", font=("arial", 28, "bold"))
 undertitle = Label(window, text="Bitwa o Hełm Alabastrowego Jednorożca", fg="black", font=("arial", 11))
@@ -40,27 +37,17 @@ def write(string):
     message_box.see("end")
     message_box.config(state=DISABLED)
 	
-# def randomize():
-# 	logo_photo_label.grid_forget()
-# 	professional_photo_label.grid_forget()
-# 	inspired_photo_label.grid_forget()
-# 	enraged_photo_label.grid_forget()
-# 	jonah_photo_label.grid_forget()
-# 	kuba_type = randint(1,4)
-# 	if kuba_type == 1:
-# 		write("\n" + "Kuba is professional.")
-# 		professional_photo_label.grid(row=3, columnspan=3)
-# 	elif kuba_type == 2:
-# 		write("\n" + "Kuba is inspired.")
-# 		inspired_photo_label.grid(row=3, columnspan=3)
-# 	elif kuba_type == 3:
-# 		write("\n" + "Kuba is enraged!")
-# 		enraged_photo_label.grid(row=3, columnspan=3)
-# 	elif kuba_type == 4:
-# 		write("\n" + "Kuba is Jonah.")
-# 		jonah_photo_label.grid(row=3, columnspan=3)
-# 	else:
-# 		write("Kuba is error.")
+def randomize():
+    unknown1_photo_label.grid_forget()
+    unknown2_photo_label.grid_forget()
+
+    heroes_number = len(heroes)
+    hero1_index = randint(0, heroes_number-1)
+    hero2_index = randint(0, heroes_number-1)
+
+    heroes[hero1_index].photo_label.grid(row=3, column=1)
+    heroes[hero2_index].photo_label.grid(row=3, column=3)
+    write("\n" + heroes[hero1_index].name + " vs " + heroes[hero2_index].name)
 
 title.grid(row=0, columnspan=3)
 undertitle.grid(row=1, columnspan=3)
