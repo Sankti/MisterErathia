@@ -16,8 +16,39 @@ christian = Hero("Christian", "img\Hero_Christian.png")
 edric = Hero("Edric", "img\Hero_Edric.png")
 orrin = Hero("Orrin", "img\Hero_Orrin.png")
 lord_haart = Hero("Lord Haart", "img\Hero_Lord_Haart_Knight.png")
+roland = Hero("Roland", "img\Hero_Roland.png")
+sir_mullich = Hero("Sir Mullich", "img\Hero_Sir_Mullich.png")
+cuthbert = Hero("Cuthbert", "img\Hero_Cuthbert.png")
+ingham = Hero("Ingham", "img\Hero_Ingham.png")
+loynis = Hero("Loynis", "img\Hero_Loynis.png")
+rion = Hero("Rion", "img\Hero_Rion.png")
+clancy = Hero("Clancy", "img\Hero_Clancy.png")
+ryland = Hero("Ryland", "img\Hero_Ryland.png")
+thorgrim = Hero("Thorgrim", "img\Hero_Thorgrim.png")
+ufretin = Hero("Ufretin", "img\Hero_Ufretin.png")
+gelu = Hero("Gelu", "img\Hero_Gelu.png")
+aeris = Hero("Aeris", "img\Hero_Aeris.png")
+ivor = Hero("Ivor", "img\Hero_Ivor.png")
+alagar = Hero("Alagar", "img\Hero_Alagar.png")
+coronius = Hero("Coronius", "img\Hero_Coronius.png")
+elleshar = Hero("Elleshar", "img\Hero_Elleshar.png")
+malcom = Hero("Malcom", "img\Hero_Malcom.png")
+uland = Hero("Uland", "img\Hero_Uland.png")
+fafner = Hero("Fafner", "img\Hero_Fafner.png")
+piquedram = Hero("Piquedram", "img\Hero_Piquedram.png")
+thane = Hero("Thane", "img\Hero_Thane.png")
+torosar = Hero("Torosar", "img\Hero_Torosar.png")
+astral = Hero("Astral", "img\Hero_Astral.png")
+halon = Hero("Halon", "img\Hero_Halon.png")
+solmyr = Hero("Solmyr", "img\Hero_Solmyr.png")
+theodorus = Hero("Theodorus", "img\Hero_Theodorus.png")
+dracon = Hero("Dracon", "img\Hero_Dracon.png")
 
-heroes = [christian, edric, orrin, lord_haart]
+heroes = [
+        christian, edric, orrin, lord_haart, roland, sir_mullich, cuthbert, ingham, loynis, rion, clancy, ryland,
+        thorgrim, ufretin, gelu, aeris, ivor, alagar, coronius, elleshar, malcom, uland, fafner, piquedram, thane,
+        torosar, astral, halon, solmyr, theodorus, dracon
+    ]
 
 unknown_img = PhotoImage(file="img\Hero_Christian.png")
 unknown1_photo_label = Label(window, image=unknown_img)
