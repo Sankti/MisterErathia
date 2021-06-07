@@ -4,7 +4,8 @@ from time import sleep
 
 window = Tk()
 window.title("Mister Erathia")
-window.geometry('320x420')
+window.geometry('320x320')
+window.columnconfigure(1, weight=1)
 
 class Hero:
     def __init__(self, name, img):
@@ -127,7 +128,7 @@ undertitle = Label(window, text="Bitwa o Hełm Alabastrowego Jednorożca", fg="b
 copyright = Label(window, text="©2021 Lulu_Quest", fg="grey", font=("arial", 8))
 remaining_text = Label(window, text="Pozostało: " + str(len(heroes_indexes)) + "/" + str(len(heroes)), fg="black", font=("arial", 11))
 versus_text = Label(window, text="VS", fg="red", font=("arial", 12))
-message_box = Text(window, width=28, height=1, wrap=WORD, fg="black", font=("Courier New", 10))
+message_box = Text(window, width=28, height=2, wrap=WORD, fg="black", font=("Courier New", 10))
 button = Button(window, text="Wyznacz Pretendentów", bg="orange", fg="red", font=("Courier New", 14, "bold"), command=lambda:randomize())
 message_box.config(state=DISABLED)
 
@@ -149,9 +150,9 @@ def randomize():
     hero2_index = choice(heroes_indexes)
     heroes_indexes.remove(hero2_index)
 
-    heroes[hero1_index].photo_label.grid(row=3, column=0)
-    heroes[hero2_index].photo_label.grid(row=3, column=2)
-    write("\n" + heroes[hero1_index].name + " vs " + heroes[hero2_index].name)
+    heroes[hero1_index].photo_label.grid(row=3, column=0, ipadx=42)
+    heroes[hero2_index].photo_label.grid(row=3, column=2, ipadx=42)
+    write("\n" + "\n" + heroes[hero1_index].name + " vs " + heroes[hero2_index].name)
 
     remaining_text = Label(window, text="Pozostało: " + str(len(heroes_indexes)) + "/" + str(len(heroes)), fg="black", font=("arial", 11))
     remaining_text.grid_forget()
@@ -160,11 +161,11 @@ def randomize():
 title.grid(row=0, column=0, columnspan=3)
 undertitle.grid(row=1, column=0, columnspan=3)
 copyright.grid(row=2, column=0, columnspan=3)
-unknown1_photo_label.grid(row=3, column=0)
+unknown1_photo_label.grid(row=3, column=0, ipadx=42)
 versus_text.grid(row=3, column=1)
-unknown2_photo_label.grid(row=3, column=2)
+unknown2_photo_label.grid(row=3, column=2, ipadx=42)
 message_box.grid(row=4, column=0, columnspan=3, pady=20)
-button.grid(row=5, column=1)
+button.grid(row=5, column=0, columnspan=3)
 remaining_text.grid(row=6, column=0, columnspan=3)
 write("Welcome to Mister Erathia.")
 
