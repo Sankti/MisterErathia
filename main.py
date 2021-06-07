@@ -1,5 +1,5 @@
 from tkinter import *
-from random import randint
+from random import choice
 from time import sleep
 
 window = Tk()
@@ -37,13 +37,19 @@ def write(string):
     message_box.see("end")
     message_box.config(state=DISABLED)
 	
+heroes_indexes = list(range(0, len(heroes)))
+
 def randomize():
+    for hero in heroes:
+        hero.photo_label.grid_forget()
+
     unknown1_photo_label.grid_forget()
     unknown2_photo_label.grid_forget()
 
-    heroes_number = len(heroes)
-    hero1_index = randint(0, heroes_number-1)
-    hero2_index = randint(0, heroes_number-1)
+    hero1_index = choice(heroes_indexes)
+    heroes_indexes.remove(hero1_index)
+    hero2_index = choice(heroes_indexes)
+    heroes_indexes.remove(hero2_index)
 
     heroes[hero1_index].photo_label.grid(row=3, column=1)
     heroes[hero2_index].photo_label.grid(row=3, column=3)
