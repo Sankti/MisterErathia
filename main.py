@@ -104,7 +104,7 @@ aenain = Hero("Aenain", "img\Hero_Aenain.png")
 gelare = Hero("Gelare", "img\Hero_Gelare.png")
 grindan = Hero("Grindan", "img\Hero_Grindan.png")
 inteus = Hero("Inteus", "img\Hero_Inteus.png")
-lord_haart_death_knight = Hero("Lord Haart Death Knight", "img\Hero_Lord_Haart_Death_Knight.png")
+kendal = Hero("General Kendal", "img\Hero_General_Kendal.png")
 
 heroes = [
     christian, edric, orrin, lord_haart, roland, sir_mullich, cuthbert, ingham, loynis, rion, clancy, ryland,
@@ -114,7 +114,7 @@ heroes = [
     dace, damacon, gunnar, shakti, alamar, darkstorn, deemer, geon, jaegar, jeddite, malekith, crag_hack,
     gurnisson, jabarkas, krellion, tyraxor, yog, boragus, kilgor, dessa, saurug, terek, vey, zubin, alkin,
     broghild, bron, drakon, gerwulf, korbac, tazar, wystan, erdamon, fiur, kalt, monere, aenain, gelare,
-    grindan, inteus, lord_haart_death_knight
+    grindan, inteus, kendal
 ]
 
 heroes_indexes = list(range(0, len(heroes)))
